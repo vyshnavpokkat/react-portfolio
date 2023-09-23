@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
+.portfolio-container {
+  height: 100vh;
+  font-family: "Source Code Pro", monospace;
+  font-size:medium;
+}
+.screen-height-100 {
+  /* min-height: 90vh; */
+}
+.wrapper {
+  /* width: 1000px; */
+  overflow: scroll;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  /* height: 300px; */
+  height: 90vh;
+}
+.jgMwAT {
+  /* width: 100%;
+    height: 100vh; */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* font-family: ui-monospace, monospace; */
+  font-family: "Source Code Pro", monospace !important;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: start !important;
+  height: 100%;
+  justify-content: start;
+}
+
+#light {
+  background-color: #e8e8e8;
+  color: black;
+  transition-duration: 5s, 1s;
+  transition-property: background-color;
+  height: auto;
+}
+#light .tree-element {
+  border: 1px solid #00000037;
+}
+#night {
+  background-color: black;
+  transition-duration: 5s, 1s;
+  transition-property: background-color;
+  color: #cae5ff;
+  /* height: 100vh; */
+}
+#night .tree-element {
+  border: 1px solid #326da5;
+}
+#night .dIRQcQ {
+  color: #cae5ff;
+  fill: #cae5ff;
+  align-items: start !important;
+}
+.wrapper::-webkit-scrollbar {
+  width: 4px;
+}
+
+.wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 31, 0.172);
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+
+
+.cursor-pointer {
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .portfolio-container {
+    font-size: smaller;
+  }
+}
+
+.glow-on-hover {
+  /*     width: 220px; */
+  /*     height: 50px; */
+  border: none;
+  outline: none;
+  /*     color: #fff; */
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  /*     border-radius: 10px; */
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(45deg, #355dfe, #424b86, #fffb00);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  /* border-radius: 10px; */
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+#light .glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #e8e8e8;
+  color: black;
+  left: 0;
+  top: 0;
+  transition-duration: 5s, 1s;
+  transition-property: background-color;
+  /* border-radius: 10px; */
+}
+#night .glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: #cae5ff;
+  left: 0;
+  top: 0;
+  transition-duration: 5s, 1s;
+  transition-property: background-color;
+  /* border-radius: 10px; */
+}
+/* .zoom {
+    padding: 50px;
+    transition: transform .2s; 
+    margin: 0 auto;
+  } */
+
+.zoom:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  top: 0;
+  transition-duration: 3s, 1s;
+  cursor: pointer;
+  /* transition-property: background-color; */
+}
+.zoom2:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    top: 0;
+    transition-duration: 3s, 1s;
+    cursor: pointer;
+    /* transition-property: background-color; */
+  }
+  .scroll-row{
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  .scroll-card > img {
+    /* margin-bottom: .75rem; */
+    width: 100%;
+  }
+
+  .scroll-row::-webkit-scrollbar {
+    /* width: 1px; */
+    height: .8px;
+    
+  }
+  
+  .scroll-row::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  #light .scroll-row::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 31, 0.172);
+    border-radius: 20px;
+    border: 1px solid transparent;
+  }
+  #night .scroll-row::-webkit-scrollbar-thumb {
+    background-color: #cae5ff;
+    border-radius: 20px;
+    border: 1px solid transparent;
+  }
+  a:link {
+    text-decoration: none;
+  }
+.hover-btn:hover{
+  color: #ff0000;
+}
+.overlay {
+  min-height: 0%;
+  max-height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 20;
+  left: 0;
+  overflow-y: hidden;
+  transition: 1s;
+}
+#night .overlay{
+  background-color: rgb(0,0,0);
+}
+#light .overlay{
+  background-color: #e8e8e8;
+}
+#night .about-logo{
+/* fill: #cae5ff; */
+fill:#ff000051
+}
+#light .about-logo{
+  fill: #1c1c1cba;
+  }
+
+.overlay-content {
+  position: relative;
+  top: 20%;
+  width: 100%;
+}
+.custom-list {
+  list-style-type: none; /* Remove default bullets */
+  padding-left: 20px; /* Add some left padding for the arrow */
+}
+
+.custom-list li {
+  position: relative; /* Set the list items as relative */
+  padding-left: 1.5em; /* Add space for the arrow */
+  margin-bottom: 0.5em; /* Optional: adjust margin between items */
+}
+
+.custom-list li::before {
+  content: "\276F"; /* Unicode arrow character (→) */
+  position: absolute;
+  left: 0;
+}
+.tecnologies-list{
+  list-style-type: none;
+  text-align: end;
+  padding-right: 2rem;
+  border-right: 1px solid red;
+
+}
+.logo-animation {
+  width: 130px;
+  text-shadow: 0 0 5px #00f, 0 0 100px #00f,0 0 20px #00f; /* Blue text shadow */
+  animation: zoomAnimation 1s ease-in-out infinite alternate; /* Zoom animation */
+}
+
+@keyframes zoomAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+}
+#active-red{
+  color: #ff0000;
+}
+.bw-logo{
+  width: 10%;
+  /* fill: #00f; */
+}
+.input-box{
+  outline: none !important;
+  background-color: transparent;
+  border-color: #326da5;
+  color: #ff0000;
+}
+.input-box:focus{
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
+.portfolio-bd-fix{
+  /* width: 100%; */
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  /* opacity: 0.4;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  /* filter: grayscale(75%); */ 
+  filter: grayscale(.4) brightness(80%)
+ 
+}
+.project-text{
+  color: rgb(255, 255, 255);
+  /* font-weight: bold; */
+  font-size: larger;
+  background-color: #000000a5;
+  padding: 20px;
+}
+.portfolio-bd-fix:hover{
+  /* width: 100%; */
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  opacity: 1;
+  cursor: pointer;
+}
+.dark-modal {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+}
+
+.dark-modal-content {
+  background-color: #333; /* Dark gray background */
+  color: white; /* White text color */
+}
+.gallery-body img {
+  --s: 15px;  /* size of the frame */
+  --b: 2px;   /* border thickness */
+  --w: 200px; /* width of the image */
+  --c: #7B3B3B;
+  
+  width: var(--w);
+  /* aspect-ratio: 1; */
+  object-fit: cover;
+  padding: calc(2*var(--s));
+  --_g: var(--c) var(--b),#0000 0 calc(100% - var(--b)),var(--c) 0;
+  background:
+    linear-gradient(      var(--_g)) 50%/100% var(--_i,100%) no-repeat,
+    linear-gradient(90deg,var(--_g)) 50%/var(--_i,100%) 100% no-repeat;
+  outline: calc(var(--w)/2) solid #0009;
+  outline-offset: calc(var(--w)/-2 - 2*var(--s));
+  transition: .4s;
+  cursor: pointer;
+  margin: 10px;
+}
+.gallery-body img:hover {
+  outline: var(--b) solid var(--c);
+  outline-offset: calc(var(--s)/-2);
+  --_i: calc(100% - 2*var(--s));
+}
+
+.gallery-body {
+  margin: 0;
+  /* min-height: 70vh; */
+  /* display: grid; */
+  place-content: center;
+  align-items: center;
+  /* grid-auto-flow: column; */
+  gap: 10px;
+  background: rgb(0, 0, 0);
+  /* width: 100%; */
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+.gallery-body::-webkit-scrollbar {
+  display: none;
+}
+.sent-btn{
+  background-color: #cae5ff;
+  color: #000;
+}
